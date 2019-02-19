@@ -1,0 +1,6 @@
+title:          Muhamamd Rusdi
+locale:         id_ID
+url:           	http://muhrusdi.github.io
+#baseurl: 	/test-live
+
+permalink:   	/:categories/:title/
