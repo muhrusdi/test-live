@@ -102,7 +102,7 @@ const Payroll = () => {
                       >
                         <FormattedMessage id="payroll-banner-desc"/> 
                       </Typography>
-                      <LinkArrow text="Try Now for Free"/>  
+                      <LinkArrow href="https://hr.modana.id/signup" text={<FormattedMessage id="try-now-for-free"/>}/> 
                     </div>
                   </Col>
                   <Col md={6}>

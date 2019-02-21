@@ -29,24 +29,36 @@ const Globalfooter = () => {
       }
     }
   `
-  const GetStarted = styled(Button)`
+  const GetStarted = styled.a`
     height: 48px;
     width: 180px;
     border-radius: 26px;
     font-size: 14px;
+    display: inline-block;
     text-transform: uppercase;
     color: #fff;
     border: 1px solid ${({theme}) => theme.color.secondary};
     background: ${({theme}) => theme.color.secondary};
+    &:hover {
+      color: #fff;
+    }
+    span {
+      display: block;
+      padding: 12px;
+    }
   `
   const NewsLetterInputStyled = styled(Search)`
     height: 44px;
     input {
       background: #fff !important;
+      height: 44px;
       border-radius: 22px !important;
       border-top-right-radius: 0 !important;
       border-bottom-right-radius: 0 !important;
       font-size: 14px !important;
+    }
+    .ant-input-group-addon {
+      background: none !important;
     }
     button {
       border-bottom-right-radius: 22px;
@@ -90,7 +102,7 @@ const Globalfooter = () => {
                   tag="h2">
                   <FormattedMessage id="footer-title"/>
                 </Typography>
-                <GetStarted><FormattedMessage id="nav-get-started"/></GetStarted>
+                <GetStarted href="https://hr.modana.id/signup"><FormattedMessage id="nav-get-started"/></GetStarted>
               </HeadWrapper>
             </Container>
             <Container xl gutter={22}>

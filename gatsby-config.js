@@ -6,22 +6,6 @@ module.exports = {
     description: 'Free yourself and be more productive',
     author: '@modana',
   },
-  developMiddleware: app => {
-    app.use(
-      "/.netlify/functions/",
-      proxy({
-        target: "https://modana.netlify.com",
-        pathRewrite: {
-          "/.netlify/functions/": "",
-        },
-        router: {
-          // when request.headers.host == 'dev.localhost:3000',
-          // override target 'http://www.example.org' to 'http://localhost:8000'
-          'https://modana.netlify.com/signup': 'http://localhost:8090/signup'
-        }
-      })
-    )
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
     {

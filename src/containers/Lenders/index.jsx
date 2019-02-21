@@ -116,7 +116,7 @@ const Lenders = () => {
                       >
                         <FormattedMessage id="lending-banner-title"/>
                       </Typography>
-                      <LinkArrow text={<FormattedMessage id="try-now-for-free"/>}/> 
+                      <LinkArrow href="https://hr.modana.id/signup" text={<FormattedMessage id="try-now-for-free"/>}/> 
                     </div>
                   </Col>
                   <Col md={6}>

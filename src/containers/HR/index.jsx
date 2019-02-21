@@ -110,7 +110,7 @@ const HR = () => {
                       >
                         <FormattedMessage id="hr-banner-desc"/> 
                       </Typography>
-                      <LinkArrow text={<FormattedMessage id="try-now-for-free"/>}/>  
+                      <LinkArrow href="https://hr.modana.id/signup" text={<FormattedMessage id="try-now-for-free"/>}/>  
                     </div>
                   </Col>
                   <Col md={6}>

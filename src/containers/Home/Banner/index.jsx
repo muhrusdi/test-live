@@ -18,7 +18,30 @@ const Banner  = () => {
       max-width: 100%;
     }
   `
-  const SubmitStyled = styled(Button)`
+  const SubmitStyled = styled.a`
+    line-height: 1.499;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    height: 42px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
     border-radius: 21px;
     background: ${({theme}) => theme.color.secondary};
     color: #fff;
@@ -29,6 +52,13 @@ const Banner  = () => {
     font-size: 12px;
     font-weight: bold;
     box-sizing: border-box;
+    &:hover {
+      color: #fff;
+    }
+    span {
+      display: block;
+      padding: 11px;
+    }
     @media screen and (max-width: ${({theme}) => theme.breakPoints.md}) {
       max-width: 100%;
       text-align: center;
@@ -166,7 +196,7 @@ const Banner  = () => {
                               }
                             </FormattedMessage>
                           </label> */}
-                          <SubmitStyled size="large">
+                          <SubmitStyled size="large" href="https://hr.modana.id/signup">
                             <FormattedMessage id="home-banner-get-started" />
                           </SubmitStyled>
                         </form>

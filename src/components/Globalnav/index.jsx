@@ -32,20 +32,35 @@ const Nav = styled.nav`
   background-color: #ffffff;
   transition: background .36s cubic-bezier(0.32, 0.08, 0.24, 1),height .56s cubic-bezier(0.52, 0.16, 0.24, 1);
   `
-const ButtonLogin = styled(Button)`
+const ButtonLogin = styled.a`
   color: #fff;
   height: 32px;
+  display: block;
   border-radius: 16px;
+  text-align: center;
   min-width: 71.38px;
   background-color: ${props => props.theme.color.secondary};
   border: 1px solid ${props => props.theme.color.secondary};
+  &:hover {
+    color: #fff;
+  }
+  span {
+    display: block;
+    padding: 4px;
+  }
 `
-const ButtonSignUp = styled(Button)`
+const ButtonSignUp = styled.a`
   color: ${props => props.theme.color.primary};
   min-width: 106.89px;
   height: 32px;
+  text-align: center;
+  display: block;
   border-radius: 16px;
   border: 1px solid ${props => props.theme.color.secondary};
+  span {
+    display: block;
+    padding: 4px;
+  }
 `
 
 const services = (
@@ -139,7 +154,7 @@ const LangMobile = styled(Button)`
   font-weight: bold;
   text-transform: uppercase;
 `
-const SignInMobile = styled(Button)`
+const SignInMobile = styled.a`
   width: 100%;
   height: 42px;
   color: #fff;
@@ -150,8 +165,14 @@ const SignInMobile = styled(Button)`
   border: 1px solid ${({theme}) => theme.color.secondary};
   font-weight: bold;
   text-transform: uppercase;
+  height: 32px;
+  display: block;
+  span {
+    display: block;
+    padding: 4px;
+  }
 `
-const GetStartedMobile = styled(Button)`
+const GetStartedMobile = styled.a`
   width: 100%;
   height: 42px;
   box-sizing: border-box;
@@ -161,6 +182,12 @@ const GetStartedMobile = styled(Button)`
   font-weight: bold;
   margin-bottom: 70px;
   text-transform: uppercase;
+  height: 32px;
+  display: block;
+  span {
+    display: block;
+    padding: 4px;
+  }
 `
 
 class Globalnav extends Component {
@@ -297,7 +324,7 @@ class Globalnav extends Component {
                                   </LangContextConsumer>
                                 </Col>
                                 <Col>
-                                  <ButtonSignUp><FormattedMessage id="nav-get-started"/></ButtonSignUp>
+                                  <ButtonSignUp href="https://hr.modana.id/signup"><FormattedMessage id="nav-get-started"/></ButtonSignUp>
                                 </Col>
                                 <Col css={theme => {
                                     return css`
@@ -307,7 +334,7 @@ class Globalnav extends Component {
                                     `
                                   } 
                                 }>
-                                  <ButtonLogin><FormattedMessage id="nav-login"/></ButtonLogin>
+                                  <ButtonLogin href="https://hr.modana.id"><FormattedMessage id="nav-login"/></ButtonLogin>
                                 </Col>
                                 <Col css={theme => {
                                     return css`

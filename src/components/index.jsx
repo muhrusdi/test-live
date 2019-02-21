@@ -176,9 +176,9 @@ const List = styled.ul`
   list-style: none;
   padding: 0;
 `
-const LinkArrow = ({text, className}) => (
+const LinkArrow = ({text, className, href}) => (
   <a
-    href="#"
+    href={href}
     className={className}
     css={theme => css`
       color: ${theme.color.primary};
